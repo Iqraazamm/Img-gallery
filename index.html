@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image_gallery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--to get full image on click  -->
+     <div class="full-img" id="fullImgBox">                                    
+        <img src="img1.jpg" id="fullImg">
+        <span onclick="closefullImg()">X</span>
+    </div>
+    <!-- images will be displayed in grids -->
+    <div class="img-gal">
+      <img src="img1.jpg" onclick="openfullImg(this.src)" >
+      <img src="img2.jpg" onclick="openfullImg(this.src)">
+      <img src="img3.jpg" onclick="openfullImg(this.src)">
+      <img src="img4.jpg" onclick="openfullImg(this.src)">
+      <img src="img5.jpg" onclick="openfullImg(this.src)">
+      <img src="img6.jpg" onclick="openfullImg(this.src)">
+      <img src="img7.jpg" onclick="openfullImg(this.src)">
+      <img src="img8.jpg" onclick="openfullImg(this.src)">
+    </div>
+    <script>
+        var fullImgBox = document.getElementById("fullImgBox");
+        var fullImg = document.getElementById("fullImg");
+
+        function openfullImg(pic){
+            fullImgBox.style.display = "flex";
+            fullImg.src = pic;
+        }
+        function closefullImg(){
+            fullImgBox.style.display = "none";
+        }
+    </script>
+    
+</body>
+</html>
